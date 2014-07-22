@@ -58,7 +58,7 @@
         <span id="todays_final_stats">
           <h6>{{ bid }}</h6>
           <small {{ bind-attr class="changeIsPositive:positive:negative" }}>{{ change }}</small>
-          <small {{ bind-attr class="changePercentIsPositive:positive:negative" }}>{{ percentChange }}</small>
+          <small {{ bind-attr class="percentChangeIsPositive:positive:negative" }}>{{ percentChange }}</small>
         </span>
       </aside>
     </div>
@@ -117,7 +117,7 @@
           <span>{{ peRatio }}</span>
         </li>
         <li>
-          <strong>P/E RatioRealtime:</strong>
+          <strong>P/E Ratio Realtime:</strong>
           <span>{{ peRatioRealtime }}</span>
         </li>
         <li>

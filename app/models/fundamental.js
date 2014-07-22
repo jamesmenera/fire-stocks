@@ -85,7 +85,7 @@ export default DS.Model.extend({
   percentChange: DS.attr(),
   
   changeIsPositive: function(){
-    var change = this.get('change');
+    var change = this.get('change').trim();
     
     if (change && change[0] === '-'){
       return false;
@@ -95,7 +95,7 @@ export default DS.Model.extend({
   }.property('change'),
   
   percentChangeIsPositive: function(){
-    var percentChange = this.get('percentChange');
+    var percentChange = this.get('percentChange').trim();
     
     if (percentChange && percentChange[0] === '-'){
       return false;

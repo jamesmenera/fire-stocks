@@ -1,8 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.View.extend({
-//For some reason this crashes the ember inspector
-
+  //For some reason this crashes the ember inspector  
   updateBodyClass: function(){
     this._super();
     
