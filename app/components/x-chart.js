@@ -16,6 +16,7 @@ export default Ember.Component.extend({
     Ember.$(elementId).highcharts('StockChart', {
       chart:{
         height: "500",
+        backgroundColor: '#2a2a2a',
         style: {
           fontFamily: '"Lato", sans-serif',
           fontWeight: 100
