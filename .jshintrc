@@ -2,7 +2,11 @@
   "predef": {
     "document": true,
     "window": true,
-    "StockerENV": true
+    "StockerENV": true,
+    "Highcharts": true,
+    "$": true,
+    "moment": true,
+    "fabric": true
   },
   "browser" : true,
   "boss" : true,

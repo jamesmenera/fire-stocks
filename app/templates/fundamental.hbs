@@ -1,0 +1,165 @@
+<section id="main_content">
+  <header>
+    <div id="company">
+      <div id="company_ticker">
+        <h2>{{ name }}</h2>
+        <small>
+          <p>({{ id }})</p>
+        </small>
+        <small>
+          {{ stockExchange }}
+        </small>
+      </div>
+      <aside id="todays_stats">
+        <div id="brief_overview">
+          <span>
+            <time>
+              {{ x-icon src="assets/images/clock.svg" width="15" height="15" class="clock_icon" }}
+              <span class="right_now">{{ helper-today "ddd, MMM D, YYYY - h:mm a z" }}</span>
+            </time>
+            <ul id="todays_summary">
+              <li>
+                <label>Open:</label>
+                <span>{{ open }}</span>
+              </li>
+              <li>
+                <label>High:</label>
+                <span>{{ daysHigh }}</span>
+              </li>
+              <li>
+                <label>Low:</label>
+                <span>{{ daysLow }}</span>
+              </li>
+            </ul>
+          </span>
+          <span id="todays_more_stats">
+            <ul>
+              <li>
+                <label>Market Cap:</label>
+                <span>{{ marketCapitalization }}</span>
+              </li>
+              <li>
+                <label>P/E Ratio (ttm):</label>
+                <span>{{ peRatio }}</span>
+              </li>
+              <li>
+                <label>Dividend yield:</label>
+                <span>
+                  {{# if dividendYield }}
+                    {{ dividendYield }}
+                  {{ else }}
+                    None
+                  {{/ if }}
+                </span>
+              </li>
+            </ul>
+          </span>
+        </div>
+        <span id="todays_final_stats">
+          <h6>{{ bid }}</h6>
+          <small {{ bind-attr class="changeIsPositive:positive:negative" }}>{{ change }}</small>
+          <small {{ bind-attr class="changePercentIsPositive:positive:negative" }}>{{ percentChange }}</small>
+        </span>
+      </aside>
+    </div>
+    {{!--
+    <nav id="toggle_box">
+      <a id="drawer_toggle" {{ action "toggleInfoDrawer" }}>
+      </a>
+    </nav>
+    <div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    --}}
+  </header>
+  {{ outlet }}
+  <article id="fundamentals">
+    <header id="fundamentals_header">
+      <h3>Fundamentals</h3>
+    </header>
+    
+    <section>
+      <h4>Earnings:</h4>
+      <ul>
+        <li>
+          <strong>Earnings per Share:</strong>
+          <span>{{ earningsShare }}</span>
+        </li>
+        <li>
+          <strong>EPS Estimate Current Year:</strong>
+          <span>{{ epsEstimateCurrentYear }}</span>
+        </li>
+        <li>
+          <strong>EPS Estimate Next Year:</strong>
+          <span>{{ epsEstimateNextYear }}</span>
+        </li>
+        <li>
+          <strong>EPS Estimate Next Quarter:</strong>
+          <span>{{ epsEstimateNextQuarter }}</span>
+        </li>
+        <li>
+          <strong>EBITDA:</strong>
+          <span>{{ ebitda }}</span>
+        </li>
+      </ul>
+    </section>
+    
+    <section>
+      <h4>Prices and Projections:</h4>
+      <ul>
+        <li>
+          <strong>P/E Ratio:</strong>
+          <span>{{ peRatio }}</span>
+        </li>
+        <li>
+          <strong>P/E RatioRealtime:</strong>
+          <span>{{ peRatioRealtime }}</span>
+        </li>
+        <li>
+          <strong>PEG Ratio:</strong>
+          <span>{{ pegRatio }}</span>
+        </li>
+        <li>
+          <strong>Price to Sales:</strong>
+          <span>{{ priceSales }}</span>
+        </li>
+        <li>
+          <strong>Price to Book:</strong>
+          <span>{{ priceBook }}</span>
+        </li>
+        <li>
+          <strong>Price Paid:</strong>
+          <span>{{ pricePaid }}</span>
+        </li>
+      </ul>
+    </section>
+    
+    <section>
+      <h4>Dividends:</h4>
+      <ul>
+        <li>
+          <strong>Dividend Share:</strong>
+          <span>{{ dividendShare }}</span>
+        </li>
+        <li>
+          <strong>Dividend Pay Date:</strong>
+          <span>{{ dividendPayDate }}</span>
+        </li>
+        <li>
+          <strong>Ex Dividend Date:</strong>
+          <span>{{ exDividendDate }}</span>
+        </li>
+        <li>
+          <strong>Dividend Yield:</strong>
+          <span>{{ dividendYield }}</span>
+        </li>
+      </ul>
+    </section>
+
+  </article>
+</section>

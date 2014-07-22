@@ -38,6 +38,12 @@ app.import({
   ]
 });
 
+app.import('vendor/highstock-release/highstock.js');
+app.import('vendor/highcharts/highcharts-more.js');
+app.import('vendor/highcharts/themes/dark-unica.js');
+app.import('vendor/moment/moment.js');
+app.import('vendor/fabric/dist/fabric.js');
+
 app.import('vendor/ic-ajax/dist/named-amd/main.js', {
   'ic-ajax': [
     'default',

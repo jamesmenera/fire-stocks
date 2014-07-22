@@ -1,3 +1,364 @@
-html, body {
-  margin: 20px;
-}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+ins {
+  background-color: #ffff99;
+  color: black;
+  text-decoration: none; }
+
+mark {
+  background-color: #ffff99;
+  color: black;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #555555;
+  color: #333333; }
+  body.index #main_header {
+    position: fixed;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: inline;
+    text-align: center; }
+    body.index #main_header .logo {
+      display: inline;
+      text-align: center;
+      margin: 20px auto;
+      position: relative;
+      top: 15%; }
+  body.index #search_stock {
+    display: block;
+    width: 100%;
+    position: fixed;
+    margin: 20px auto;
+    top: 30%;
+    right: 0; }
+
+#main_header {
+  padding: 20px;
+  background-color: white;
+  font-size: 36px;
+  font-weight: 100;
+  color: white;
+  position: relative; }
+  #main_header .logo {
+    fill: #555555; }
+
+#company_ticker, #todays_stats, #todays_final_stats {
+  display: inline-block;
+  vertical-align: top; }
+
+#company_ticker {
+  padding-right: 40px; }
+
+#todays_stats {
+  display: inline-block; }
+  #todays_stats time {
+    display: block;
+    color: #a3e4e3;
+    font-weight: 300;
+    padding-top: 5px; }
+  #todays_stats .clock_icon, #todays_stats .right_now {
+    display: inline-block;
+    vertical-align: bottom; }
+  #todays_stats .clock_icon {
+    padding-right: 10px;
+    fill: white; }
+  #todays_stats ul {
+    list-style: none; }
+    #todays_stats ul li {
+      display: inline-block; }
+
+#todays_summary {
+  margin-top: 15px; }
+
+#todays_more_stats {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+#todays_summary, #todays_more_stats {
+  display: block; }
+  #todays_summary li, #todays_more_stats li {
+    padding-right: 10px;
+    color: white; }
+    #todays_summary li span, #todays_more_stats li span {
+      font-weight: 100;
+      font-size: 14px;
+      color: #7cd8d7; }
+    #todays_summary li label, #todays_more_stats li label {
+      font-weight: 300;
+      font-size: 14px;
+      padding-right: 5px; }
+
+#brief_overview, #todays_final_stats {
+  display: inline-block;
+  vertical-align: top; }
+
+#brief_overview {
+  padding-right: 40px; }
+
+#todays_final_stats h6 {
+  text-align: left;
+  color: white;
+  font-size: 24px; }
+  #todays_final_stats h6 ~ small {
+    padding-top: 10px;
+    color: #7cd8d7;
+    display: block;
+    font-size: 18px;
+    font-weight: 300; }
+    #todays_final_stats h6 ~ small.negative {
+      color: #ee7735; }
+    #todays_final_stats h6 ~ small.positive {
+      color: #57cf57; }
+
+#search_stock {
+  position: absolute;
+  top: 25px;
+  right: 20px; }
+  #search_stock .relative_helper {
+    display: inline-block;
+    position: relative; }
+  #search_stock input[type="search"],
+  #search_stock [x-tools="icon"] {
+    display: inline-block;
+    vertical-align: middle; }
+  #search_stock [x-tools="icon"] {
+    fill: #555555;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    left: 15px; }
+  #search_stock input[type="search"] {
+    font-size: 24px;
+    border: 1px solid #cccccc;
+    padding: 10px 20px 10px 50px;
+    background: #e7e7e7;
+    -webkit-appearance: none;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
+    color: #777777; }
+    #search_stock input[type="search"]:focus {
+      background-color: white; }
+      #search_stock input[type="search"]:focus + label {
+        opacity: 1; }
+  #search_stock [for="search-box"] {
+    opacity: 0.6; }
+
+#main_content header {
+  padding: 20px;
+  position: relative; }
+  #main_content header h2, #main_content header h3 {
+    font-size: 22px;
+    font-weight: 300;
+    color: white; }
+    #main_content header h2 ~ small, #main_content header h3 ~ small {
+      padding-top: 14px;
+      color: #cccccc;
+      font-size: 14px;
+      font-weight: 100;
+      display: block; }
+
+header#fundamentals_header {
+  padding: 20px;
+  background-color: #777777; }
+  header#fundamentals_header h3 {
+    color: white;
+    font-weight: 300;
+    font-size: 22px;
+    padding: 20px; }
+
+#fundamentals {
+  font-size: 20px;
+  font-weight: 100;
+  background-color: white;
+  padding-bottom: 100px; }
+  #fundamentals h4 {
+    padding: 20px 0; }
+  #fundamentals ul {
+    list-style: none; }
+    #fundamentals ul li {
+      padding: 10px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 140%; }
+      #fundamentals ul li:nth-child(even) {
+        background-color: #e2e2e2; }
+      #fundamentals ul li strong, #fundamentals ul li span {
+        display: inline-block;
+        vertical-align: top; }
+      #fundamentals ul li strong {
+        width: 170px;
+        margin-right: 20px; }
+  #fundamentals section {
+    padding: 0 20px 20px; }
+
+#toggle_box {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  display: block; }
+
+#drawer_toggle {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px;
+  background-color: #cccccc;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  #drawer_toggle:before {
+    content: "";
+    border: 12px solid transparent;
+      border-top: 20px solid #555555;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: -8px;
+    height: 0;
+    width: 0;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: -12px; }
+
+@media (max-width: 700px) {
+  #main_header {
+    padding: 10px 20px 20px; }
+    #main_header .logo {
+      margin: 0 auto;
+      display: block; }
+
+  #search_stock {
+    position: static;
+    display: block;
+    width: 100%;
+    margin-top: 30px; }
+    #search_stock .relative_helper {
+      margin: 0 auto;
+      width: 100%;
+      display: block; }
+      #search_stock .relative_helper input[type="search"] {
+        width: 100%; }
+
+  #company_ticker {
+    padding: 20px 20px 10px; }
+
+  #brief_overview {
+    padding: 15px 20px 10px; }
+
+  #todays_stats {
+    background-color: #333333; }
+
+  #todays_more_stats li {
+    margin-bottom: 10px;
+    margin-padding: 0 20px; }
+
+  #main_content header {
+    padding: 0; }
+  #main_content #todays_final_stats {
+    padding: 15px 20px 20px;
+    background-color: #222222;
+    display: block; }
+    #main_content #todays_final_stats h6, #main_content #todays_final_stats small {
+      display: inline-block;
+      vertical-align: bottom;
+      margin: 0;
+      padding: 0; }
+    #main_content #todays_final_stats h6 {
+      margin-right: 10px; }
+    #main_content #todays_final_stats small {
+      margin-right: 10px; }
+
+  #todays_final_stats {
+    padding: 0 20px 20px; }
+
+  body.index .logo {
+    top: 15%; }
+  body.index #search_stock {
+    width: auto;
+    right: auto;
+    top: 20%;
+    position: relative;
+    display: inline-block; }
+  body.index .relative_helper {
+    width: auto;
+    display: inline-block; }
+  body.index #search-box {
+    width: auto; } }

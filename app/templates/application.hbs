@@ -1,3 +1,17 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+<header id="main_header">
+  {{# link-to 'application' }}
+    {{ x-icon src="assets/images/logo.svg" class="logo" width="300" height="56" }}
+  {{/ link-to }}
+  
+  <form id="search_stock" {{ action "searchStockSymbol" model on="submit" }}>
+    <div class="relative_helper">
+      {{ input id="search-box" type="search" class="search-stock" value=symbol placeholder="Search Stock Symbol" autocomplete="off" }}
+       <label for="search-box">
+        {{ x-icon src="assets/images/search.svg" class="search_glass" width="30" height="30" }}
+      </label>
+    </div>
+  </form>
 
-{{outlet}}
+</header>
+
+{{ outlet }}

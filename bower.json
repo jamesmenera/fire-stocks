@@ -14,5 +14,10 @@
     "ember-load-initializers": "stefanpenner/ember-load-initializers#0.0.2",
     "ember-qunit-notifications": "^0.0.1",
     "ember-cli-test-loader": "rjackson/ember-cli-test-loader#0.0.2"
+  },
+  "devDependencies": {
+    "highcharts": "~4.0.3",
+    "highstock-release": "~2.0.3",
+    "fabric": "~1.4.9"
   }
 }

@@ -1,0 +1,393 @@
+@import reset
+@import mixins/border-radius
+@import mixins/box-sizing
+
+$aqua: #2b908f
+$orange: #EE7735
+$green: #57cf57
+
+body
+  font:
+    family: 'Lato', sans-serif
+  background:
+    color: #555
+  color: #333
+  
+  &.index
+    #main_header
+      position: fixed
+      padding: 0
+      width: 100%
+      height: 100%
+      display: inline
+      text:
+        align: center 
+      
+      .logo
+        display: inline
+        text:
+          align: center
+        margin: 20px auto
+        position: relative
+        top: 15%
+    
+    #search_stock
+      display: block
+      width: 100%
+      position: fixed
+      margin: 20px auto
+      top: 30%
+      right: 0
+        
+        
+#main_header
+  padding: 20px
+  background:
+    color: #fff
+  font:
+    size: 36px
+    weight: 100
+  color: #fff
+  position: relative
+  
+  .logo
+    fill: #555
+    
+#company_ticker, #todays_stats, #todays_final_stats
+  display: inline-block
+  vertical-align: top
+
+#company_ticker
+  padding:
+    right: 40px
+    
+#todays_stats
+  display: inline-block
+  
+  time
+    display: block
+    color: lighten($aqua, 40)
+    font:
+      weight: 300
+    padding:
+      top: 5px
+      
+  .clock_icon, .right_now
+    display: inline-block
+    vertical-align: bottom
+    
+  .clock_icon
+    padding:
+      right: 10px
+    fill: #fff
+  
+  ul
+    list-style: none
+    
+    li
+      display: inline-block
+
+#todays_summary
+  margin:
+    top: 15px
+    
+#todays_more_stats
+  margin:
+    top: 10px
+    bottom: 10px
+      
+#todays_summary, #todays_more_stats
+  display: block
+    
+  li
+    padding:
+      right: 10px
+    color: #fff
+    
+    span
+      font:
+        weight: 100
+        size: 14px
+      color: lighten($aqua, 30)
+    
+    label
+      font:
+        weight: 300
+        size: 14px
+      padding:
+        right: 5px
+        
+#brief_overview, #todays_final_stats
+  display: inline-block
+  vertical-align: top
+  
+#brief_overview
+  padding:
+    right: 40px
+    
+#todays_final_stats
+  h6
+    text:
+      align: left
+    color: #fff
+    font:
+      size: 24px
+    
+    ~ small
+      padding:
+        top: 10px
+      color: lighten($aqua, 30)
+      display: block
+      font:
+        size: 18px
+        weight: 300
+      
+      &.negative
+        color: $orange
+        
+      &.positive
+        color: $green
+    
+#search_stock
+  position: absolute
+  top: 25px
+  right: 20px
+  
+  .relative_helper
+    display: inline-block
+    position: relative
+  
+  input[type="search"],
+  [x-tools="icon"]
+    display: inline-block
+    vertical-align: middle
+    
+  [x-tools="icon"]
+    fill: #555
+    position: absolute
+    top: 50%
+    margin:
+      top: -15px
+    left: 15px
+  
+  input[type="search"]
+    font:
+      size: 24px
+    border: 1px solid #ccc
+    padding: 10px 20px 10px 50px
+    background: #e7e7e7
+    -webkit-appearance: none
+    +border-radius(30px)
+    +box-sizing(border-box)
+    outline: 0
+    color: #777
+    
+    &:focus
+      background:
+        color: #fff
+        
+      + label
+        opacity: 1
+        
+  [for="search-box"]
+    opacity: .6
+    
+#main_content
+  header
+    padding: 20px
+    position: relative
+    
+    h2, h3
+      font:
+        size: 22px
+        weight: 300
+      color: #fff
+      
+      ~ small
+        padding:
+          top: 14px
+        color: #ccc
+        font:
+          size: 14px
+          weight: 100
+        display: block
+      
+header#fundamentals_header
+  padding: 20px
+  background:
+    color: #777
+  
+  h3
+    color: #fff
+    font:
+      weight: 300
+      size: 22px
+    padding: 20px
+    
+      
+#fundamentals
+  font:
+    size: 20px
+    weight: 100
+  background:
+    color: #fff
+  padding:
+    bottom: 100px
+    
+  h4
+    padding: 20px 0
+  
+  ul
+    list-style: none
+    
+    li
+      padding: 10px
+      font:
+        size: 16px
+        weight: 300
+      line-height: 140%
+      
+      &:nth-child(even)
+        background:
+          color: #e2e2e2
+        
+      strong, span
+        display: inline-block
+        vertical-align: top
+        
+      strong
+        width: 170px
+        margin:
+          right: 20px
+    
+  section
+    padding: 0 20px 20px
+    
+  
+  
+#toggle_box
+  position: absolute
+  top: 50%
+  margin:
+    top: -20px
+  right: 20px
+  width: 40px
+  height: 40px
+  display: block
+  
+#drawer_toggle
+  background:
+    color: #fff
+  width: 40px
+  height: 40px
+  +border-radius(30px)
+  background:
+    color: #ccc
+  display: block
+  position: absolute
+  top: 0
+  left: 0
+  
+  &:before
+    content: ''
+    border: 12px solid transparent
+      top: 20px solid #555
+    position: absolute
+    top: 50%
+    left: 50%
+    margin:
+      left: -12px
+      top: -8px
+    height: 0
+    width: 0
+    display: block
+    +box-sizing(border-box)
+    margin:
+      left: -12px
+      
+  
+    
+@media (max-width: 700px)
+  #main_header
+    padding: 10px 20px 20px
+    .logo
+      margin: 0 auto
+      display: block
+      
+  #search_stock
+    position: static
+    display: block
+    width: 100%
+    margin:
+      top: 30px
+    
+    .relative_helper
+      margin: 0 auto
+      width: 100%
+      display: block
+      
+      input[type="search"]
+        width: 100%
+        
+  #company_ticker
+    padding: 20px 20px 10px
+      
+  #brief_overview
+    padding: 15px 20px 10px
+    
+  #todays_stats
+    background:
+      color: #333
+      
+  #todays_more_stats
+    li
+      margin:
+        bottom: 10px
+        padding: 0 20px
+        
+  #main_content
+    header
+      padding: 0
+      
+    #todays_final_stats
+      padding: 15px 20px 20px
+      background:
+        color: #222
+      display: block
+        
+      h6, small
+        display: inline-block
+        vertical-align: bottom
+        margin: 0
+        padding: 0
+        
+      h6
+        margin:
+          right: 10px
+          
+      small
+        margin:
+          right: 10px
+          
+  #todays_final_stats
+    padding: 0 20px 20px
+        
+  body
+    &.index
+      .logo
+        top: 15%
+        
+      #search_stock
+        width: auto
+        right: auto
+        top: 20%
+        position: relative
+        display: inline-block
+        
+      .relative_helper
+        width: auto
+        display: inline-block
+        
+      #search-box
+        width: auto
+        

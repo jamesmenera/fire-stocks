@@ -1,0 +1,4 @@
+<form id="search_stock" {{ action "searchStockSymbol" model on="submit" }}>
+  {{ input type="search" class="stk-spec-search-stock" value=symbol placeholder="Search Stock Symbol" autocomplete="off" }}
+</form>
+{{ outlet }}
