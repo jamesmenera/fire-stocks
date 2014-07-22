@@ -20,7 +20,7 @@ export default Ember.Component.extend({
     if (src){
       type = src.split('.').pop().toLowerCase();
       
-      if (src == "png"){
+      if (src === "png"){
         this.drawImagePng();  
       } else if ( src === "svg" ){
         this.loadSVGFromURL();
