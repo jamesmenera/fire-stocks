@@ -226,12 +226,12 @@ body {
 
 header#fundamentals_header {
   padding: 20px;
-  background-color: #777777; }
+  background-color: #555555; }
   header#fundamentals_header h3 {
     color: white;
     font-weight: 300;
     font-size: 22px;
-    padding: 20px; }
+    padding: 20px 0; }
 
 #fundamentals {
   font-size: 20px;
@@ -304,6 +304,9 @@ header#fundamentals_header {
     #main_header .logo {
       margin: 0 auto;
       display: block; }
+
+  header#fundamentals_header h3 {
+    padding: 20px; }
 
   #search_stock {
     position: static;
